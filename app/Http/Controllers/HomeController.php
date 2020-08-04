@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -17,17 +16,7 @@ class HomeController extends Controller
         //$this->middleware('auth');
     }
 
-    // /**
-    //  * Show the application dashboard.
-    //  *
-    //  * @return \Illuminate\Contracts\Support\Renderable
-    //  */
-    // public function index()
-    // {
-    //     $products = Product::paginate(20);
-    //     return view('home', compact('products'));
-    // }
-
+    
     /**
      * Show the application dashboard.
      *

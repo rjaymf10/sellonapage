@@ -48,6 +48,20 @@
               <i class="ni ni-bold-right"></i>
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('carts.index') }}">
+              <div style="position: relative;">
+                <i class="ni ni-cart text-neutral fa-2x"></i>
+                <span class="badge badge-pill badge-danger" style="position: absolute; top: -2px; right: -2px;">
+                  @auth
+                    {{ \Cart::session(auth()->id())->getContent()->count() }}
+                  @else
+                      0
+                  @endauth
+                </span>
+              </div>
+            </a>
+          </li>
           <li class="nav-item dropdown">
               <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <div class="media align-items-center">
