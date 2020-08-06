@@ -141,7 +141,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-07-18 08:29:45',
-                'updated_at' => '2020-07-21 10:57:35',
+                'updated_at' => '2020-07-22 15:47:41',
             ),
             7 => 
             array (
@@ -159,7 +159,7 @@ class DataTypesTableSeeder extends Seeder
                 'server_side' => 0,
                 'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-07-19 10:42:45',
-                'updated_at' => '2020-07-19 10:51:21',
+                'updated_at' => '2020-07-22 15:48:00',
             ),
             8 => 
             array (
@@ -170,14 +170,14 @@ class DataTypesTableSeeder extends Seeder
                 'display_name_plural' => 'Products',
                 'icon' => 'voyager-bag',
                 'model_name' => 'App\\Product',
-                'policy_name' => NULL,
-                'controller' => NULL,
+                'policy_name' => 'App\\Policies\\ProductPolicy',
+                'controller' => 'App\\Http\\Controllers\\Admin\\ProductController',
                 'description' => NULL,
                 'generate_permissions' => 1,
                 'server_side' => 0,
-                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null}',
+                'details' => '{"order_column":null,"order_display_column":null,"order_direction":"asc","default_search_key":null,"scope":null}',
                 'created_at' => '2020-07-21 13:10:51',
-                'updated_at' => '2020-07-21 13:10:51',
+                'updated_at' => '2020-07-22 15:47:50',
             ),
         ));
         

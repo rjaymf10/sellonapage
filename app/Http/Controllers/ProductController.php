@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use Illuminate\Http\Request;
+use App\Category;
 
 class ProductController extends Controller
 {
@@ -15,7 +16,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::paginate(20);
-        return view('products.index', compact('products'));
+        $categories = Category::whereNull('parent_id')->with('children')->get();
+
+        return view('products.index', compact('products', 'categories'));
     }
 
     /**

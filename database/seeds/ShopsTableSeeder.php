@@ -37,7 +37,7 @@ class ShopsTableSeeder extends Seeder
                 'description' => 'My store with branded products',
                 'rating' => NULL,
                 'created_at' => '2020-07-19 07:13:00',
-                'updated_at' => '2020-07-19 07:15:02',
+                'updated_at' => '2020-07-22 13:51:52',
             ),
             2 => 
             array (

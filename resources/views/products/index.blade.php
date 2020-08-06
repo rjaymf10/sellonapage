@@ -31,6 +31,11 @@
     </svg>
   </div>
 </section>
+<section class="bg-secondary">
+  <div class="row justify-content-center">
+    @include('partials.productsearch')
+  </div>
+</section>
 <section class="section bg-secondary">
   <div class="container pt-lg-2">
     <div class="row justify-content-left">
@@ -61,7 +66,7 @@
         </div>
       @endforeach
     </div>
-    <div class="row d-flex justify-content-center pt-lg-4">
+    <div class="row d-flex justify-content-center mt-lg-4">
       <nav aria-label="...">
         {{ $products->links() }}
       </nav>

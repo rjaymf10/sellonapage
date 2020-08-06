@@ -34,7 +34,9 @@
     
     <div class="main-content">
         @include('layouts.navbars.navbar')
-        @yield('content')
+        <div class="wrapper">
+            @yield('content')
+        </div>
     </div>
 
     @include('layouts.footers.footer')

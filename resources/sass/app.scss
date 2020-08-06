@@ -1,20 +1,8 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
-// // Variables
-// @import 'variables';
+// Variables
+@import 'variables';
 
-// Bootstrap Functions
+// Bootstrap
 @import '~bootstrap/scss/bootstrap';
-
-// Theme Variables
-@import "scss/argon-design-system/variables";
-
-// Theme Core
-@import "scss/argon-design-system/theme";
-
-// Utilities
-@import "scss/argon-design-system/utilities";
-
-// Bootstrap Core
-@import "scss/argon-design-system/mixins";
