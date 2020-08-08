@@ -34,11 +34,6 @@
       </div>
     </div>
   </div>
-  <div class="separator separator-bottom separator-skew zindex-100">
-    <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-      <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
-    </svg>
-  </div>
 </div>
 <div class="section features-1">
   <div class="container">
@@ -80,7 +75,7 @@
     </div>
   </div>
 </div>
-<div class="section features-6">
+<div class="section features-6 bg-secondary">
   <div class="container">
     <div class="row text-center">
         <h5 class="display-4">Join the thousands of product creators, thought leaders, course creators, and entrepreneurs who have used SellonApage to sell over $100 million of their products</h5>
@@ -92,8 +87,8 @@
             <h5 class="title">Ready for change?</h5>
             <p>Try SellonApage today and get the advanced tools you need to start making serious money selling online.</p>
             <div class="btn-wrapper mt-4">
-              <a href="#" class="btn btn-primary btn-icon mt-3 mb-sm-0">
-                <span class="btn-inner--text">TRY IT FOR FREE NOW</span>
+              <a href="#" class="btn btn-primary btn-round mt-3 mb-sm-0">
+                TRY IT FOR FREE NOW
               </a>
             </div>
           </div>

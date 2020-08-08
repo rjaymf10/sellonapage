@@ -21,6 +21,7 @@ class ShopsTableSeeder extends Seeder
             array (
                 'id' => 1,
                 'name' => 'Admin Store',
+                'slug' => 'admin_store',
                 'user_id' => 1,
                 'is_active' => 1,
                 'description' => 'Admin store with branded products',
@@ -32,6 +33,7 @@ class ShopsTableSeeder extends Seeder
             array (
                 'id' => 2,
                 'name' => 'My Store',
+                'slug' => 'my_store',
                 'user_id' => 2,
                 'is_active' => 1,
                 'description' => 'My store with branded products',
@@ -43,6 +45,7 @@ class ShopsTableSeeder extends Seeder
             array (
                 'id' => 3,
                 'name' => 'My Shop',
+                'slug' => 'my_shop',
                 'user_id' => 3,
                 'is_active' => 1,
                 'description' => 'My shop with branded products',

@@ -15,10 +15,20 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('brand', 50);
+            $table->string('sku', 191);
+            $table->string('name', 191);
+            $table->string('slug', 191);
             $table->text('description')->nullable();
+            $table->integer('quantity');
+            $table->decimal('weight', 8, 2)->nullable();
             $table->decimal('price', 8, 2);
-            $table->string('cover_img')->nullable();
+            $table->decimal('sale_price', 8, 2)->nullable();
+            $table->tinyInteger('status')->default(1);
+            $table->tinyInteger('featured')->default(0);
+            $table->string('rating', 45)->nullable();
+            $table->string('cover_image')->default('products/basket.jpg');
+            $table->text('images')->nullable();
             $table->unsignedBigInteger('shop_id');
 
             $table->foreign('shop_id')->references('id')->on('shops')->onDelete('cascade');

@@ -44,7 +44,7 @@ class SettingsTableSeeder extends Seeder
                 'id' => 3,
                 'key' => 'site.logo',
                 'display_name' => 'Site Logo',
-                'value' => '',
+                'value' => 'settings\\August2020\\ylnPC9Z6jJwLRrQpn5mG.png',
                 'details' => '',
                 'type' => 'image',
                 'order' => 3,
@@ -126,6 +126,28 @@ class SettingsTableSeeder extends Seeder
                 'type' => 'text',
                 'order' => 1,
                 'group' => 'Admin',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'key' => 'site.site_email',
+                'display_name' => 'Site Email',
+                'value' => 'admin@gmail.com',
+                'details' => NULL,
+                'type' => 'text',
+                'order' => 6,
+                'group' => 'Site',
+            ),
+            11 => 
+            array (
+                'id' => 12,
+                'key' => 'site.site_call',
+                'display_name' => 'Site Call',
+                'value' => '+011 2231 4545',
+                'details' => NULL,
+                'type' => 'text',
+                'order' => 7,
+                'group' => 'Site',
             ),
         ));
         

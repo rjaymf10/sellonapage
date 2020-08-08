@@ -110,7 +110,7 @@ class UsersTableSeeder extends Seeder
                 'avatar' => 'users/default.png',
                 'email_verified_at' => '2020-07-28 03:38:05',
                 'password' => '$2y$10$hoBstlkldH.5bVn7cu2Ydue4rhH4cNeozin2JRzYTowmL0zDB2IdG',
-                'remember_token' => 'BXqly3iyJcc8hHqzM61mmNTYYzRIAYuNkLOS5LhyeZjf9jltZYdTE6TXCiY6',
+                'remember_token' => NULL,
                 'settings' => '{"locale":"en"}',
                 'created_at' => '2020-07-26 08:22:18',
                 'updated_at' => '2020-08-05 11:45:35',
