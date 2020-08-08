@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="{{ asset('ezone') }}/css/responsive.css">
     <script src="{{ asset('ezone') }}/js/vendor/modernizr-2.8.3.min.js"></script>
 
+    @stack('styles')
 </head>
 <body class="{{ $class ?? '' }}">
     @auth()
@@ -91,5 +92,7 @@
             application: "argon-design-system-pro"
         });
     </script>
+
+    @stack('scripts')
 </body>
 </html>
