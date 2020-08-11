@@ -10,8 +10,10 @@
       </div>
       <div class="electronics-login-register">
         <ul>
-          <li><a href="{{ route('voyager.dashboard') }}"><i class="pe-7s-users"></i>My Account</a></li>
-          <li><a href="#"><i class="pe-7s-like"></i>Wishlist</a></li>
+          @if (auth()->user()->email_verified_at != null)
+            <li><a href="{{ route('voyager.dashboard') }}" target="_blank"><i class="pe-7s-users"></i>My Account</a></li>
+            <li><a href="#"><i class="pe-7s-like"></i>Wishlist</a></li>
+          @endif
           <li><a href="javascript:void(0)" onclick="event.preventDefault();
             document.getElementById('logout-form').submit();"><i class="pe-7s-right-arrow"></i>Logout</a></li>
         </ul>

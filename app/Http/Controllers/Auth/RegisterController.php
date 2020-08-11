@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Shop;
 use App\User;
 use TCG\Voyager\Models\Role;
 use App\Http\Controllers\Controller;
@@ -55,6 +56,8 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'shop_name' => ['required', 'string', 'max:255'],
+            'shop_url' => ['required', 'string', 'max:255', 'unique:shops,slug', 'regex:/^\S*$/u'],
         ]);
     }
 
@@ -67,11 +70,21 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         $role = Role::findOrFail($data['role_id']);
-        // dd($role->toArray());
-        return User::create([
+        
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ])->setRole($role->name);
+
+        if ($data['role_id'] == 3) {
+            $shop = Shop::create([
+                'name' => $data['shop_name'],
+                'slug' => $data['shop_url'],
+                'user_id' => $user->id,
+            ]);
+        }
+
+        return $user;
     }
 }

@@ -55,7 +55,7 @@
     </div>
 
     @include('layouts.footers.footer')
-
+    
 
     <!--   Core JS Files   -->
     <script src="{{ asset('argon') }}/js/core/jquery.min.js" type="text/javascript"></script>

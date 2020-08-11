@@ -15,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::status()->paginate(10);
         $categories = Category::whereNull('parent_id')->with('children')->get();
 
         return view('products.index', compact('products', 'categories'));
@@ -50,7 +50,7 @@ class ProductController extends Controller
      */
     public function show(Product $product)
     {
-        //
+        return view('products.show', compact('product'));
     }
 
     /**

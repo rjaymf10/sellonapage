@@ -40,7 +40,7 @@
         <div class="card shadow login">
           <div class="login-form-container">
             <div class="login-form">
-              <form method="POST" action="{{ route('register') }}">
+              <form method="POST" action="{{ route('register') }}" autocomplete="off">
                 @csrf
 
                 <div class="form-group @error('name') has-danger @enderror">
@@ -78,14 +78,40 @@
                     <input id="password" type="password" class="form-control" name="password_confirmation" required autocomplete="current-password" placeholder="Confirm Password">
                   </div>
                 </div>
+                <div id="vendor_form">
+                  <div class="form-group @error('shop_name') has-danger @enderror">
+                    <div class="input-group">
+                      <input id="shop_name" type="text" class="form-control @error('shop_name') is-invalid @enderror" name="shop_name" value="{{ old('shop_name') }}" required autocomplete="shop_name" autofocus placeholder="Shop Name">
+                      @error('shop_name')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                      @enderror
+                    </div>
+                  </div>
+                  <div class="form-group @error('shop_url') has-danger @enderror">
+                    <div class="input-group">
+                      <input id="shop_url" type="text" class="form-control @error('shop_url') is-invalid @enderror" name="shop_url" value="{{ old('shop_url') }}" required autocomplete="shop_url" placeholder="Shop URL">
+                      @error('shop_url')
+                        <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                        </span>
+                      @enderror
+                    </div>
+                  </div>
+                </div>
                 <div class="form-group @error('role_id') has-danger @enderror">
                   <div class="custom-control custom-radio mb-3">
-                    <input name="role_id" value="2" class="custom-control-input" id="customRadio1" type="radio" checked>
-                    <label class="custom-control-label" for="customRadio1">Customer</label>
+                    <input name="role_id" value="2" class="custom-control-input role" id="customer" type="radio" @if (old('role_id') == 2 OR old('role_id') == null)
+                      checked
+                    @endif>
+                    <label class="custom-control-label" for="customer">Customer</label>
                   </div>
                   <div class="custom-control custom-radio mb-3">
-                    <input name="role_id" value="3" class="custom-control-input" id="customRadio2" type="radio">
-                    <label class="custom-control-label" for="customRadio2">Vendor</label>
+                    <input name="role_id" value="3" class="custom-control-input role" id="vendor" type="radio" @if (old('role_id') == 3)
+                    checked
+                  @endif>
+                    <label class="custom-control-label" for="vendor">Vendor</label>
                   </div>
                 </div>
                 <br>
@@ -111,3 +137,22 @@
   </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+  $(document).ready(function () {
+    if ($('input[type="radio"][name="role_id"]:checked').val() == 3)
+      $('#vendor_form').show();
+    else 
+      $('#vendor_form').hide();
+
+    $('input[type="radio"][name="role_id"]').on( "change", function () {
+      var inputValue = $(this).attr("value");
+      if (inputValue == 3)
+        $('#vendor_form').show("slow");
+      else 
+        $('#vendor_form').hide("slow");
+    });
+  });
+</script>
+@endpush

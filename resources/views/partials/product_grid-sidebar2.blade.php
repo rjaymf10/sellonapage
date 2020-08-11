@@ -2,7 +2,7 @@
   <div class="col-lg-12 col-xl-6 d-flex">
     <div class="product-wrapper mb-30 single-product-list product-list-right-pr mb-60">
       <div class="product-img list-img-width">
-        <a href="#">
+        <a href="{{ route('products.show', $product->id) }}">
           <img src="{{ asset('storage/'.$product->cover_image) }}" alt="">
         </a>
         <div class="product-action-list-style">

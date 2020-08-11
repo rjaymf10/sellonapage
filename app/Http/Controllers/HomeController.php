@@ -26,10 +26,20 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            return view('home.auth');
+            return redirect()->route('home.auth');
         }
         else {
             return view('home.guest');
         }
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function home()
+    {
+        return view('home.auth');
     }
 }

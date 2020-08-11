@@ -22,4 +22,8 @@ class Product extends Model
     {
         return $this->belongsToMany(Category::class, 'product_categories', 'product_id', 'category_id');
     }
+
+    public function scopeStatus($query) {
+        return $query->where('status', 1);
+    }
 }
