@@ -143,6 +143,34 @@ class UsersTableSeeder extends Seeder
                 'created_at' => '2020-07-26 09:49:00',
                 'updated_at' => '2020-08-05 11:46:05',
             ),
+            9 => 
+            array (
+                'id' => 10,
+                'role_id' => 3,
+                'name' => 'Seller4 Seller',
+                'email' => 'seller4@gmail.com',
+                'avatar' => 'users/default.png',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$h5rDSrXfB3/vk0N04rAUKuA8KfolU.TH/.jFHOr0KQf72nG.4cele',
+                'remember_token' => NULL,
+                'settings' => NULL,
+                'created_at' => '2020-08-09 12:36:21',
+                'updated_at' => '2020-08-09 12:36:22',
+            ),
+            10 => 
+            array (
+                'id' => 11,
+                'role_id' => 3,
+                'name' => 'Seller5 Seller',
+                'email' => 'seller5@gmail.com',
+                'avatar' => 'users/default.png',
+                'email_verified_at' => NULL,
+                'password' => '$2y$10$5hLvGFowgjH9QfZeqW29uunXkvm9NMffcgc3HhfoVagGk09MsQYby',
+                'remember_token' => NULL,
+                'settings' => NULL,
+                'created_at' => '2020-08-09 12:44:52',
+                'updated_at' => '2020-08-09 12:44:52',
+            ),
         ));
         
         

@@ -13,17 +13,20 @@ class CartController extends Controller
         $items = $cart->getContent();
         $total = $cart->getTotal();
 
+        // dd($items->toArray());
+
         return view('carts.index', compact('items', 'total'));
     }
 
-    public function store(Product $product)
+    public function store(Request $request)
     {
         // add the product to cart
+        $product = Product::findOrFail($request->product_id);
         \Cart::session(auth()->id())->add(array(
             'id' => $product->id,
             'name' => $product->name,
             'price' => $product->price,
-            'quantity' => 1,
+            'quantity' => $request->quantity,
             'attributes' => array(),
             'associatedModel' => $product
         ));
@@ -54,7 +57,10 @@ class CartController extends Controller
 
     public function checkout()
     {
-        
-        return view('carts.checkout');
+        $cart = \Cart::session(auth()->id());
+        $items = $cart->getContent();
+        $total = $cart->getTotal();
+
+        return view('carts.checkout', compact('items', 'total'));
     }
 }

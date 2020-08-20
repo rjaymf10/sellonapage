@@ -53,6 +53,18 @@ class ShopsTableSeeder extends Seeder
                 'created_at' => '2020-07-19 11:27:00',
                 'updated_at' => '2020-07-19 11:28:07',
             ),
+            3 => 
+            array (
+                'id' => 4,
+                'name' => 'ADmin Store',
+                'slug' => 'admin-store',
+                'user_id' => 11,
+                'is_active' => 0,
+                'description' => NULL,
+                'rating' => NULL,
+                'created_at' => '2020-08-09 12:44:52',
+                'updated_at' => '2020-08-09 12:44:52',
+            ),
         ));
         
         

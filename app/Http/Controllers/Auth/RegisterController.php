@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Mail\ShopActivationRequest;
+use Illuminate\Support\Facades\Mail;
 
 class RegisterController extends Controller
 {
@@ -83,6 +85,12 @@ class RegisterController extends Controller
                 'slug' => $data['shop_url'],
                 'user_id' => $user->id,
             ]);
+            //send mail to admin
+            $admins = User::whereHas('role', function($q) {
+                $q->where('name', 'admin');
+            })->get();
+
+            Mail::to($admins)->send(new ShopActivationRequest($shop));
         }
 
         return $user;

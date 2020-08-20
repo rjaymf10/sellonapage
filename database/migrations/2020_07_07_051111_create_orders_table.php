@@ -21,7 +21,7 @@ class CreateOrdersTable extends Migration
             $table->decimal('grand_total', 20, 2);
             $table->integer('item_count');
             $table->boolean('is_paid')->default(false);
-            $table->enum('payment_method', ['cash_on_delivery', 'direct_bank_transfer', 'paypal'])->default('cash_on_delivery');
+            $table->enum('payment_method', ['cash_on_delivery', 'direct_bank_transfer', 'paypal', 'stripe'])->default('cash_on_delivery');
             $table->string('shipping_fullname');
             $table->string('shipping_address');
             $table->string('shipping_city');

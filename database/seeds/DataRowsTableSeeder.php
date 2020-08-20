@@ -1455,7 +1455,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 4,
+                'order' => 7,
             ),
             90 => 
             array (
@@ -1471,7 +1471,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 5,
+                'order' => 9,
             ),
             91 => 
             array (
@@ -1487,7 +1487,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 8,
+                'order' => 11,
             ),
             92 => 
             array (
@@ -1503,7 +1503,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 9,
+                'order' => 13,
             ),
             93 => 
             array (
@@ -1519,7 +1519,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Shop","table":"shops","type":"belongsTo","column":"shop_id","key":"id","label":"name","pivot_table":"categories","pivot":"0","taggable":"0"}',
-                'order' => 7,
+                'order' => 10,
             ),
             94 => 
             array (
@@ -1535,7 +1535,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 0,
                 'delete' => 0,
                 'details' => '{}',
-                'order' => 3,
+                'order' => 5,
             ),
             95 => 
             array (
@@ -1551,7 +1551,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 3,
+                'order' => 4,
             ),
             96 => 
             array (
@@ -1567,7 +1567,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 4,
+                'order' => 8,
             ),
             97 => 
             array (
@@ -1582,8 +1582,8 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
-                'order' => 6,
+                'details' => '{"slugify":{"origin":"name","forceUpdate":true}}',
+                'order' => 3,
             ),
             98 => 
             array (
@@ -1599,7 +1599,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 8,
+                'order' => 12,
             ),
             99 => 
             array (
@@ -1615,7 +1615,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 9,
+                'order' => 14,
             ),
             100 => 
             array (
@@ -1631,14 +1631,14 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 11,
+                'order' => 15,
             ),
             101 => 
             array (
                 'id' => 126,
                 'data_type_id' => 10,
                 'field' => 'status',
-                'type' => 'text',
+                'type' => 'checkbox',
                 'display_name' => 'Status',
                 'required' => 1,
                 'browse' => 1,
@@ -1646,8 +1646,8 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
-                'order' => 12,
+                'details' => '{"on":"Active","off":"Inactive"}',
+                'order' => 16,
             ),
             102 => 
             array (
@@ -1663,7 +1663,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 13,
+                'order' => 17,
             ),
             103 => 
             array (
@@ -1679,7 +1679,7 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{}',
-                'order' => 14,
+                'order' => 18,
             ),
             104 => 
             array (
@@ -1688,14 +1688,14 @@ class DataRowsTableSeeder extends Seeder
                 'field' => 'cover_image',
                 'type' => 'image',
                 'display_name' => 'Cover Image',
-                'required' => 1,
+                'required' => 0,
                 'browse' => 1,
                 'read' => 1,
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{"resize":{"width":"1000","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"cropped","crop":{"width":"300","height":"250"}}]}',
-                'order' => 15,
+                'details' => '{"resize":{"width":"1200","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"thumbnail","crop":{"width":"300","height":"250"}}]}',
+                'order' => 19,
             ),
             105 => 
             array (
@@ -1710,8 +1710,8 @@ class DataRowsTableSeeder extends Seeder
                 'edit' => 1,
                 'add' => 1,
                 'delete' => 1,
-                'details' => '{}',
-                'order' => 16,
+                'details' => '{"resize":{"width":"1200","height":"null"},"quality":"70%","upsize":true,"thumbnails":[{"name":"medium","scale":"50%"},{"name":"small","scale":"25%"},{"name":"thumbnail","crop":{"width":"300","height":"250"}}]}',
+                'order' => 20,
             ),
             106 => 
             array (
@@ -1727,7 +1727,23 @@ class DataRowsTableSeeder extends Seeder
                 'add' => 1,
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Category","table":"categories","type":"belongsToMany","column":"id","key":"id","label":"name","pivot_table":"product_categories","pivot":"1","taggable":"0"}',
-                'order' => 17,
+                'order' => 21,
+            ),
+            107 => 
+            array (
+                'id' => 132,
+                'data_type_id' => 10,
+                'field' => 'details',
+                'type' => 'rich_text_box',
+                'display_name' => 'Details',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 6,
             ),
         ));
         

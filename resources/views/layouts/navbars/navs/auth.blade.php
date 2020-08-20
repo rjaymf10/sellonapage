@@ -62,10 +62,10 @@
         </div>
         <div class="categories-cart same-style">
           <div class="same-style-icon">
-            <a href="#"><i class="pe-7s-cart"></i></a>
+            <a href="{{ route('carts.index') }}"><i class="pe-7s-cart"></i></a>
           </div>
           <div class="same-style-text">
-            <a href="cart.html">My Cart <br>
+            <a href="{{ route('carts.index') }}">My Cart <br>
               @auth
                 {{ \Cart::session(auth()->id())->getContent()->count() }}
               @else

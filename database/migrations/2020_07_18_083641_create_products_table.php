@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('sku', 191);
             $table->string('name', 191);
             $table->string('slug', 191);
+            $table->text('details')->nullable();
             $table->text('description')->nullable();
             $table->integer('quantity');
             $table->decimal('weight', 8, 2)->nullable();
@@ -27,7 +28,7 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->tinyInteger('featured')->default(0);
             $table->string('rating', 45)->nullable();
-            $table->string('cover_image')->default('products/basket.jpg');
+            $table->string('cover_image')->nullable();
             $table->text('images')->nullable();
             $table->unsignedBigInteger('shop_id');
 

@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="{{ asset('ezone') }}/css/responsive.css">
     <script src="{{ asset('ezone') }}/js/vendor/modernizr-2.8.3.min.js"></script>
 
-    @stack('styles')
+    @yield('styles')
 </head>
 <body class="{{ $class ?? '' }}">
     @auth()
@@ -50,9 +50,7 @@
     @endauth
     
     @include('layouts.navbars.navbar')
-    <div class="wrapper">
-        @yield('content')
-    </div>
+    @yield('content')
 
     @include('layouts.footers.footer')
     
@@ -62,6 +60,9 @@
     <script src="{{ asset('argon') }}/js/core/popper.min.js" type="text/javascript"></script>
     <script src="{{ asset('argon') }}/js/core/bootstrap.min.js" type="text/javascript"></script>
 
+    <script src="{{ asset('ezone') }}/js/vendor/jquery-1.12.0.min.js"></script>
+    <script src="{{ asset('ezone') }}/js/popper.js"></script>
+    <script src="{{ asset('ezone') }}/js/bootstrap.min.js"></script>
     <script src="{{ asset('ezone') }}/js/jquery.magnific-popup.min.js"></script>
     <script src="{{ asset('ezone') }}/js/isotope.pkgd.min.js"></script>
     <script src="{{ asset('ezone') }}/js/imagesloaded.pkgd.min.js"></script>
@@ -93,6 +94,6 @@
         });
     </script>
 
-    @stack('scripts')
+    @yield('scripts')
 </body>
 </html>
